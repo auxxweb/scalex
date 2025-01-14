@@ -152,12 +152,25 @@ body {
 .modal-body textarea {
     background-color: rgba(255, 255, 255, 0.05);
     border: none;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgb(255, 255, 255);
+    padding-left: 8px;
 }
 
 .modal-body input:focus,
 .modal-body textarea:focus {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
+}
+.modal-body input.error,
+.modal-body textarea.error {
+    border: 1px solid #3880C1; /* Red border for error */
+    background-color: rgba(255, 77, 77, 0.1); /* Light red background */
+    color: #ff4d4d; /* Red text color for visibility */
+}
+label.error, span.error {
+    color: #ff4d4d; /* Bright red for visibility */
+    font-size: 0.875rem; /* Slightly smaller text size */
+    margin-top: 4px; /* Space above the message */
+    display: block; /* Ensure the error message is on a new line */
 }
 
 .modal-note {
