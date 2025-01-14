@@ -59,8 +59,8 @@
                     <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                     <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
                     <li><a class="smoothscroll"  href="#services" title="services">Services</a></li>
-                    <li><a class="smoothscroll"  href="#works" title="works">Navigators </a></li>
-                    <li><a class="smoothscroll"  href="#works" title="works">Clients  </a></li>
+                    <li><a class="smoothscroll"  href="#navigators" title="works">Navigators </a></li>
+                    <li><a class="smoothscroll"  href="#clients" title="works">Clients  </a></li>
                     <li><a class="smoothscroll"  href="#clients" title="clients">Testimonials </a></li>
                     <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
                 </ul>
@@ -265,7 +265,7 @@
     </section> <!-- end s-services -->
 
     <!-- highlights -->
-    <section id="clients" class="s-clients">
+    <section id="services" class="s-clients">
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
@@ -303,7 +303,7 @@
 
     <!-- works
     ================================================== -->
-    <section id='works' class="s-works">
+    <section id='navigators' class="s-works">
 
         <div class="intro-wrap">
                 
@@ -812,14 +812,14 @@
             <div class="col-six tab-full left footer-desc">
 
                 <div class="footer-logo"></div>
-                Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Quaerat voluptas autem necessitatibus vitae aut.
+               Our mission to transform businesses and empower individuals. Whether you're a business seeking real leads or a motivated individual ready to become a Navigator, ScaleX is your partner for success.
 
             </div>
 
             <div class="col-six tab-full right footer-subscribe">
 
                 <h4>Get Notified</h4>
-                <p>Quia quo qui sed odit. Quaerat voluptas autem necessitatibus vitae aut non alias sed quia. Ut itaque enim optio ut excepturi deserunt iusto porro.</p>
+                <p>Stay informed with our newsletter, bringing you the latest insights, tips, and updates in Business. Explore expert advice, industry trends, and exclusive offers tailored to keep you ahead.</p>
 
                 <div class="subscribe-form">
                     <form id="mc-form" class="group" novalidate="true">
@@ -837,8 +837,7 @@
 
             <div class="col-twelve">
                 <div class="copyright">
-                    <span>© Copyright Glint 2017</span> 
-                    <span>Site Template by <a href="https://www.colorlib.com/">Colorlib</a></span>	
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is designed and developed by <a href="https://auxxweb.in" target="_blank">Auxxweb IT Solutions</a>
                 </div>
 
                 <div class="go-top">
@@ -905,7 +904,65 @@
         </div>
     </div>
 
-
+    <div id="clientRegistrationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h3 class="subhead">Register with ScaleX</h3>
+                <h1 class="display-2 display-2--light">Register Your Business</h1>
+            </div>
+            <div class="modal-body">
+                <form name="clientRegistrationForm" id="clientRegistrationForm" method="post" action="" novalidate="novalidate">
+                    <fieldset>
+                        <div class="form-field">
+                            <input name="businessName" type="text" id="businessName" placeholder="Business Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <input name="contactPerson" type="text" id="contactPerson" placeholder="Contact Person" value="" minlength="2" required="" aria-required="true" class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <input name="email" type="email" id="email" placeholder="Email" value="" required="" aria-required="true" class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <input name="phone" type="tel" id="phone" placeholder="Phone Number" value="" required="" aria-required="true" class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <input name="businessType" type="text" id="businessType" placeholder="Business Type" value="" required="" aria-required="true" class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <textarea name="services" id="services" placeholder="Services/Products Offered" rows="3" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                        </div>
+                        <div class="form-field">
+                            <input name="targetMarket" type="text" id="targetMarket" placeholder="Target Market/Location" value="" required="" aria-required="true" class="full-width">
+                        </div>
+                        <div class="form-field">
+                            <button type="submit" class="full-width btn--primary">Register My Business</button>
+                            <div class="submit-loader">
+                                <div class="text-loader">Sending...</div>
+                                <div class="s-loader">
+                                    <div class="bounce1"></div>
+                                    <div class="bounce2"></div>
+                                    <div class="bounce3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                
+                <!-- register-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div> 
+            
+                <!-- register-success -->
+                <div class="message-success">
+                    Your registration was sent, thank you!<br>
+                </div>
+                
+                <p class="modal-note">Start connecting with real leads today.</p>
+            </div>
+        </div>
+    </div>
     <!-- Java Script
     ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>

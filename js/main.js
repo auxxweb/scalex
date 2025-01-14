@@ -20,6 +20,51 @@
     doc.setAttribute('data-useragent', navigator.userAgent);
 
 
+    const modal = document.getElementById('clientRegistrationModal');
+    const btn = document.querySelector('a[href="#contact"].btn.btn--stroke');
+    const span = document.getElementsByClassName('close-modal')[0];
+    
+    btn.onclick = function(e) {
+        e.preventDefault();
+        modal.style.display = 'block';
+    }
+    
+    span.onclick = function() {
+        modal.style.display = 'none';
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+    
+    document.getElementById('clientRegistrationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const form = this;
+        const messageSuccess = form.nextElementSibling.nextElementSibling;
+        const messageWarning = form.nextElementSibling;
+        const submitLoader = form.querySelector('.submit-loader');
+        
+        // Show loader
+        submitLoader.style.display = 'block';
+        
+        // Simulate form submission (replace with your actual form submission logic)
+        setTimeout(function() {
+            submitLoader.style.display = 'none';
+            messageSuccess.style.display = 'block';
+            
+            // Reset form
+            form.reset();
+            
+            // Hide success message and close modal after delay
+            setTimeout(function() {
+                messageSuccess.style.display = 'none';
+                modal.style.display = 'none';
+            }, 2000);
+        }, 1000);
+    });
+
    /* Preloader
     * -------------------------------------------------- */
     var clPreloader = function() {
