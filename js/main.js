@@ -21,7 +21,7 @@
 
 
     const modal = document.getElementById('clientRegistrationModal');
-    const btn = document.querySelector('a[href="#contact"].btn.btn--stroke');
+    const btn = document.querySelector('a[href="#client-register"].btn.btn--stroke');
     const span = document.getElementsByClassName('close-modal')[0];
     
     btn.onclick = function(e) {
@@ -64,6 +64,88 @@
             }, 2000);
         }, 1000);
     });
+
+// Get the navigator modal
+var navigatorModal = document.getElementById("navigatorRegistrationModal");
+
+// Get the button that opens the modal
+var navigatorBtn = document.querySelector("a[href='#nav-register'].btn.btn--stroke");
+
+// Get the <span> element that closes the modal
+var navigatorSpan = navigatorModal.querySelector(".close-modal");
+
+// When the user clicks the button, open the modal 
+navigatorBtn.onclick = function(e) {
+    e.preventDefault();
+    navigatorModal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+navigatorSpan.onclick = function() {
+    navigatorModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == navigatorModal) {
+        navigatorModal.style.display = "none";
+    }
+}
+
+// Form submission handling
+$(document).ready(function() {
+
+    $("#navigatorRegistrationForm").validate({
+        /* validation rules */
+        rules: {
+            fullName: "required",
+            email: {
+                required: true,
+                email: true
+            },
+            phone: "required",
+            location: "required",
+            operationArea: "required"
+        },
+        
+        /* error messages */
+        messages: {
+            fullName: "Please enter your full name",
+            email: {
+                required: "Please enter your email address",
+                email: "Please enter a valid email address"
+            },
+            phone: "Please enter your phone number",
+            location: "Please enter your location",
+            operationArea: "Please enter your preferred area of operation"
+        },
+        
+        submitHandler: function(form) {
+            var $submit = $('.submit-loader'),
+                $form = $('#navigatorRegistrationForm');
+
+            $submit.slideDown("slow");
+
+            $.ajax({
+                type: "POST",
+                url: "path/to/your/handler",
+                data: $(form).serialize(),
+                success: function(response) {
+                    // On success
+                    $form.slideUp("slow");
+                    setTimeout(function(){
+                        $('.message-success').slideDown("slow");
+                    }, 1000);
+                },
+                error: function() {
+                    // On error
+                    $('.message-warning').slideDown("slow");
+                    $submit.slideUp("slow");
+                }
+            });
+        }
+    });
+});
 
    /* Preloader
     * -------------------------------------------------- */

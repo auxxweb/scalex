@@ -113,10 +113,10 @@
                 </h1>
 
                 <div class="home-content__buttons">
-                    <a href="#about" class="smoothscroll btn btn--stroke">
+                    <a href="#nav-register" class="smoothscroll btn btn--stroke">
                         Join as a Navigator
                     </a>
-                    <a href="#contact" class="smoothscroll btn btn--stroke">
+                    <a href="#client-register" class="smoothscroll btn btn--stroke">
                         Register as a Client
                     </a>
                    
@@ -963,6 +963,66 @@
             </div>
         </div>
     </div>
+
+
+<!-- Navigator Registration Modal -->
+<div id="navigatorRegistrationModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-header">
+            <h3 class="subhead">Join ScaleX</h3>
+            <h1 class="display-2 display-2--light">Become a ScaleX Navigator</h1>
+        </div>
+        <div class="modal-body">
+            <form name="navigatorRegistrationForm" id="navigatorRegistrationForm" method="post" action="" novalidate="novalidate">
+                <fieldset>
+                    <div class="form-field">
+                        <input name="fullName" type="text" id="fullName" placeholder="Full Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="email" type="email" id="navigatorEmail" placeholder="Email" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="phone" type="tel" id="navigatorPhone" placeholder="Phone Number" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="location" type="text" id="location" placeholder="Location" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="operationArea" type="text" id="operationArea" placeholder="Preferred Area of Operation" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="motivation" id="motivation" placeholder="Why Do You Want to Join ScaleX? (Optional)" rows="3" cols="50" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button type="submit" class="full-width btn--primary">Submit Application</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+            
+            <!-- register-warning -->
+            <div class="message-warning">
+                Something went wrong. Please try again.
+            </div> 
+        
+            <!-- register-success -->
+            <div class="message-success">
+                Your application was submitted successfully, thank you!<br>
+            </div>
+            
+            <p class="modal-note">Join our network of successful Navigators today.</p>
+        </div>
+    </div>
+</div>
+
     <!-- Java Script
     ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>
